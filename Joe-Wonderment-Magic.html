@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe Wonderment | Professional Magician</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#d4af37',secondary:'#4a2c8f'},borderRadius:{'none':'0px','sm':'8px',DEFAULT:'12px','md':'16px','lg':'20px','xl':'24px','2xl':'28px','3xl':'32px','full':'9999px','button':'12px'}}}}</script>
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f0f1a;
+            color: #f3f4f6;
+        }
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-section {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, rgba(15,15,26,0.9) 0%, rgba(15,15,26,0.7) 50%, rgba(15,15,26,0.3) 100%);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #d4af37;
+        }
+        .custom-checkbox {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #4a2c8f;
+            border-radius: 4px;
+            background-color: transparent;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+        }
+        .custom-checkbox:checked {
+            background-color: #d4af37;
+            border-color: #d4af37;
+        }
+        .custom-checkbox:checked::before {
+            content: '\2713';
+            font-size: 14px;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="bg-[#0f0f1a] py-4 px-6 border-b border-gray-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-['Pacifico'] text-primary">Joe Wonderment</a>
+            
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#" class="text-white hover:text-primary transition-colors">Home</a>
+                <a href="#services" class="text-white hover:text-primary transition-colors">Services</a>
+                <a href="#shop" class="text-white hover:text-primary transition-colors">Shop</a>
+                <a href="#about" class="text-white hover:text-primary transition-colors">About</a>
+                <a href="#contact" class="text-white hover:text-primary transition-colors">Contact</a>
+                <button class="bg-primary text-[#0f0f1a] px-6 py-2 font-medium !rounded-button hover:bg-opacity-90 transition-all whitespace-nowrap">Book Now</button>
+            </nav>
+            
+            <button class="md:hidden w-10 h-10 flex items-center justify-center text-white">
+                <i class="ri-menu-line ri-2x"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section w-full h-[90vh]" style="background-image: url('https://public.readdy.ai/ai/img_res/9be5bacf64aad95ce13c5b82abd4c3f1.jpg')">
+        <div class="max-w-7xl mx-auto px-6 h-full flex items-center hero-content">
+            <div class="w-full max-w-2xl">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 heading-font leading-tight text-white">Experience the Wonder.<br>Believe in the Impossible.</h1>
+                <p class="text-xl mb-8 text-gray-200 max-w-xl">Joe Wonderment has been captivating audiences with magic for over two decades. From intimate gatherings to grand events, his performances blend mystery, humor, and charm to create awe-inspiring memories.</p>
+                <div class="flex flex-wrap gap-4">
+                    <button class="bg-primary text-[#0f0f1a] px-8 py-3 font-medium !rounded-button hover:bg-opacity-90 transition-all text-lg whitespace-nowrap">Book Your Magic Experience</button>
+                    <button class="border-2 border-white text-white px-8 py-3 font-medium !rounded-button hover:bg-white hover:text-[#0f0f1a] transition-all text-lg whitespace-nowrap">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Block -->
+    <section class="py-20 bg-[#151525]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-2/5">
+                    <div class="rounded-xl overflow-hidden shadow-2xl border-2 border-primary">
+                        <img src="https://public.readdy.ai/ai/img_res/8524680f79c39a7c273767af69efe50a.jpg" alt="Joe Wonderment" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+                <div class="md:w-3/5">
+                    <h2 class="text-4xl font-bold mb-6 heading-font text-white">About <span class="text-primary">Joe Wonderment</span></h2>
+                    <div class="relative">
+                        <i class="ri-double-quotes-l ri-3x text-primary opacity-20 absolute -left-4 -top-4"></i>
+                        <p class="text-lg mb-6 text-gray-300 relative z-10">With over 20 years of experience in the magical arts, I've dedicated my life to creating moments of wonder and amazement. My journey began as a child when I received my first magic kit, and that spark of curiosity has grown into a lifelong passion.</p>
+                        <p class="text-lg mb-6 text-gray-300">Today, I perform for audiences of all sizes – from intimate gatherings to grand corporate events and everything in between. My performances blend sleight of hand, mentalism, and theatrical elements to create an experience that will leave you and your guests with lasting memories.</p>
+                        <p class="text-lg mb-8 text-gray-300">What sets my performances apart is my commitment to creating personalized, interactive experiences that engage and delight audiences of all ages. I believe that magic is not just about tricks – it's about creating moments of genuine wonder and connection.</p>
+                        <i class="ri-double-quotes-r ri-3x text-primary opacity-20 absolute right-4 bottom-0"></i>
+                    </div>
+                    <button class="bg-transparent border-2 border-primary text-primary px-6 py-2 font-medium !rounded-button hover:bg-primary hover:text-[#0f0f1a] transition-all whitespace-nowrap">Learn More About Joe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Showcase -->
+    <section id="services" class="py-20 bg-[#0f0f1a]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 heading-font text-white">Magical <span class="text-primary">Services</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Choose from a variety of magical experiences tailored to your specific event and audience.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Birthday Parties -->
+                <div class="service-card bg-[#151525] rounded-xl overflow-hidden shadow-lg border border-gray-800 hover:border-primary">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/97b5bc7cf926c38feb6eb71d6d91538b.jpg" alt="Birthday Party Magic" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-cake-3-line ri-lg text-[#0f0f1a]"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 heading-font text-white">Birthday Parties</h3>
+                        <p class="text-gray-300 mb-6">Make birthdays magical for kids and adults alike. Interactive tricks and audience participation, tailored to every age group.</p>
+                        <a href="#" class="text-primary font-medium flex items-center">
+                            Learn More
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- School Events -->
+                <div class="service-card bg-[#151525] rounded-xl overflow-hidden shadow-lg border border-gray-800 hover:border-primary">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/9561df440712e3d503f58b6940ad3423.jpg" alt="School Events Magic" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-school-line ri-lg text-[#0f0f1a]"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 heading-font text-white">School Events</h3>
+                        <p class="text-gray-300 mb-6">Perfect for assemblies, fundraisers, or celebrations. Combining entertainment with inspiring messages for students.</p>
+                        <a href="#" class="text-primary font-medium flex items-center">
+                            Learn More
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Corporate Events -->
+                <div class="service-card bg-[#151525] rounded-xl overflow-hidden shadow-lg border border-gray-800 hover:border-primary">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/51ffa3bc0469b27488b71f6a2d2f8665.jpg" alt="Corporate Events Magic" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-building-line ri-lg text-[#0f0f1a]"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 heading-font text-white">Corporate Events</h3>
+                        <p class="text-gray-300 mb-6">Bring excitement to team-building sessions, holiday parties, and conferences with personalized, high-impact magic.</p>
+                        <a href="#" class="text-primary font-medium flex items-center">
+                            Learn More
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Wedding Receptions -->
+                <div class="service-card bg-[#151525] rounded-xl overflow-hidden shadow-lg border border-gray-800 hover:border-primary">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/adae55b3758bcf9ea7f80892fd1f1f70.jpg" alt="Wedding Reception Magic" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-heart-line ri-lg text-[#0f0f1a]"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 heading-font text-white">Wedding Receptions</h3>
+                        <p class="text-gray-300 mb-6">Add a spark of wonder to your special day with elegant close-up magic during cocktail hours and receptions.</p>
+                        <a href="#" class="text-primary font-medium flex items-center">
+                            Learn More
+                            <i class="ri-arrow-right-line ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-[#151525]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 heading-font text-white">What <span class="text-primary">Clients Say</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Don't just take my word for it. Here's what some of my clients have to say about their magical experiences.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-[#0f0f1a] p-8 rounded-xl border border-gray-800 relative">
+                    <div class="absolute -top-5 left-8 w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                        <i class="ri-double-quotes-l ri-lg text-[#0f0f1a]"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 mt-4">Joe performed at our company's annual gala, and he absolutely blew everyone away! His close-up magic during the cocktail hour had our executives completely mystified, and his stage show was the perfect entertainment for our diverse group. We've already booked him for next year!</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://public.readdy.ai/ai/img_res/5b591f8cec0df637b8933d960add4685.jpg" alt="Emily Richardson" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">Emily Richardson</h4>
+                            <p class="text-sm text-gray-400">Events Director, Nexus Technologies</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-[#0f0f1a] p-8 rounded-xl border border-gray-800 relative">
+                    <div class="absolute -top-5 left-8 w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                        <i class="ri-double-quotes-l ri-lg text-[#0f0f1a]"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 mt-4">We hired Joe for our daughter's 10th birthday party, and it was the highlight of the year! He kept 15 energetic kids completely captivated for an hour, and even the parents were amazed by his performance. His ability to connect with the children while keeping the adults entertained was truly impressive.</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://public.readdy.ai/ai/img_res/d9b2f3a51b8c3b1bb0744d05a92bbfd9.jpg" alt="Michael Torres" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">Michael Torres</h4>
+                            <p class="text-sm text-gray-400">Parent & Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-[#0f0f1a] p-8 rounded-xl border border-gray-800 relative">
+                    <div class="absolute -top-5 left-8 w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                        <i class="ri-double-quotes-l ri-lg text-[#0f0f1a]"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 mt-4">Joe's performance at our wedding reception was absolutely magical! His close-up magic during the cocktail hour kept our guests entertained while we were taking photos, and everyone is still talking about his incredible card tricks months later. It added such a special touch to our day.</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://public.readdy.ai/ai/img_res/d67e89cd7fec5904342ad28f2c1bec28.jpg" alt="Sarah & James Wilson" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">Sarah & James Wilson</h4>
+                            <p class="text-sm text-gray-400">Newlyweds</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="py-20 bg-[#0f0f1a] relative">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('https://public.readdy.ai/ai/img_res/53e89dd72a5699d4991fa72379182b53.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 heading-font text-white">Ready to <span class="text-primary">Experience the Magic?</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Book Joe Wonderment for your next event and create memories that will last a lifetime.</p>
+            </div>
+
+            <div class="bg-[#151525] rounded-xl p-8 md:p-12 border border-gray-800 max-w-4xl mx-auto">
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-gray-300 mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full bg-[#0f0f1a] border border-gray-700 rounded p-3 text-white" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-300 mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full bg-[#0f0f1a] border border-gray-700 rounded p-3 text-white" placeholder="Your email">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-300 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full bg-[#0f0f1a] border border-gray-700 rounded p-3 text-white" placeholder="Your phone">
+                        </div>
+                        <div>
+                            <label for="event-date" class="block text-gray-300 mb-2">Event Date</label>
+                            <input type="date" id="event-date" class="w-full bg-[#0f0f1a] border border-gray-700 rounded p-3 text-white">
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="event-type" class="block text-gray-300 mb-2">Event Type</label>
+                        <div class="relative">
+                            <select id="event-type" class="w-full bg-[#0f0f1a] border border-gray-700 rounded p-3 text-white appearance-none pr-8">
+                                <option value="" disabled selected>Select event type</option>
+                                <option value="birthday">Birthday Party</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="wedding">Wedding Reception</option>
+                                <option value="school">School Event</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                                <i class="ri-arrow-down-s-line text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-300 mb-2">Tell us about your event</label>
+                        <textarea id="message" rows="4" class="w-full bg-[#0f0f1a] border border-gray-700 rounded p-3 text-white" placeholder="Please provide details about your event, number of guests, and any specific requests"></textarea>
+                    </div>
+
+                    <div class="mb-6 flex items-start">
+                        <input type="checkbox" id="terms" class="custom-checkbox mr-3 mt-1">
+                        <label for="terms" class="text-gray-300">I agree to the <a href="#" class="text-primary">Terms of Service</a> and <a href="#" class="text-primary">Privacy Policy</a></label>
+                    </div>
+
+                    <button type="submit" class="bg-primary text-[#0f0f1a] px-8 py-3 font-medium !rounded-button hover:bg-opacity-90 transition-all text-lg w-full whitespace-nowrap">Submit Booking Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed Section -->
+    <section class="py-20 bg-[#151525]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 heading-font text-white">Magic in <span class="text-primary">Action</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Follow Joe on Instagram for behind-the-scenes content and magical moments.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="relative group overflow-hidden rounded-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/394d9b4ac2b74d2a97f3320e747268b3.jpg" alt="Instagram post" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <div>
+                            <div class="flex items-center text-white mb-2">
+                                <i class="ri-heart-line mr-2"></i>
+                                <span>243</span>
+                                <i class="ri-chat-1-line ml-4 mr-2"></i>
+                                <span>18</span>
+                            </div>
+                            <p class="text-white text-sm">The classic card trick never gets old! #MagicMoments</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/bd2bd6029482c58c14b25d9254919a69.jpg" alt="Instagram post" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <div>
+                            <div class="flex items-center text-white mb-2">
+                                <i class="ri-heart-line mr-2"></i>
+                                <span>187</span>
+                                <i class="ri-chat-1-line ml-4 mr-2"></i>
+                                <span>24</span>
+                            </div>
+                            <p class="text-white text-sm">Making Emma's 8th birthday magical! #KidsMagic</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/16ef94ea133289503c23cf29efaba6f5.jpg" alt="Instagram post" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <div>
+                            <div class="flex items-center text-white mb-2">
+                                <i class="ri-heart-line mr-2"></i>
+                                <span>312</span>
+                                <i class="ri-chat-1-line ml-4 mr-2"></i>
+                                <span>29</span>
+                            </div>
+                            <p class="text-white text-sm">Corporate magic at its finest! #CorporateEntertainment</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group overflow-hidden rounded-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/341b616576c18063390943236e3fdd0a.jpg" alt="Instagram post" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <div>
+                            <div class="flex items-center text-white mb-2">
+                                <i class="ri-heart-line mr-2"></i>
+                                <span>276</span>
+                                <i class="ri-chat-1-line ml-4 mr-2"></i>
+                                <span>15</span>
+                            </div>
+                            <p class="text-white text-sm">The art of coin manipulation. #CloseUpMagic</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="https://www.instagram.com" target="_blank" class="inline-flex items-center text-primary border-2 border-primary px-6 py-2 rounded-full hover:bg-primary hover:text-[#0f0f1a] transition-all">
+                    <i class="ri-instagram-line mr-2"></i>
+                    Follow on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0f0f1a] pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <a href="#" class="text-3xl font-['Pacifico'] text-primary mb-6 inline-block">Joe Wonderment</a>
+                    <p class="text-gray-400 mb-6">Creating moments of wonder and amazement for over two decades. Available for bookings nationwide.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary transition-colors">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary transition-colors">
+                            <i class="ri-twitter-x-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-400 hover:text-primary hover:border-primary transition-colors">
+                            <i class="ri-youtube-line"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-primary transition-colors">Services</a></li>
+                        <li><a href="#shop" class="text-gray-400 hover:text-primary transition-colors">Shop</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-primary transition-colors">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-6 text-white">Stay Updated</h3>
+                    <p class="text-gray-400 mb-6">Subscribe to our newsletter for the latest magical updates and special offers.</p>
+                    <form class="mb-4">
+                        <div class="flex">
+                            <input type="email" placeholder="Your email address" class="bg-[#151525] border border-gray-700 rounded-l p-3 text-white flex-grow border-r-0">
+                            <button type="submit" class="bg-primary text-[#0f0f1a] px-4 py-3 rounded-r font-medium whitespace-nowrap">Subscribe</button>
+                        </div>
+                    </form>
+                    <p class="text-gray-500 text-sm">By subscribing, you agree to our Privacy Policy.</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500">&copy; 2025 Joe Wonderment. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
